@@ -29,8 +29,6 @@ class SecurityController extends Controller{
 
         $data['error'] = $authUtils->getLastAuthenticationError();
 
-
-
         $form = $this->createForm(LoginFormType::class, null, [
             'action' => $this->generateUrl('login'),
             'attr' => [
