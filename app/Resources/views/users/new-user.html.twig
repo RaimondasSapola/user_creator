@@ -1,0 +1,6 @@
+{% extends 'security/index.html.twig' %}
+{% block body %}
+    {% include '::flash-message.html.twig' %}
+    <h3>Create New User</h3>
+    {{ form(registration_form) }}
+{% endblock %}

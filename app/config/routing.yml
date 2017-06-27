@@ -1,0 +1,8 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+pageNotFound:
+    path:  /{path}
+    defaults: { _controller: AppBundle:PageNotFound:pageNotFound, path: '' }
+    requirements:
+        path: .*

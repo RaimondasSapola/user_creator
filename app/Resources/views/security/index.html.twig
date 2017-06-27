@@ -1,0 +1,21 @@
+{%  extends 'base.html.twig' %}
+{%  block header %}
+    <div class="top-bar">
+        <div class="row">
+            <div class="top-bar-left">
+                <ul class="dropdown menu" data-dropdown-menu>
+                    <li id="home" ><a href="{{ path("home") }}">Home</a></li>
+                    {% if is_granted('ROLE_SUPER_ADMIN') %}
+                        <li id="new-user" ><a href="{{ path("add_user") }}">Add User</a></li>
+                        <li id="user-list" ><a href="{{ path("users") }}">Users</a></li>
+                    {% endif %}
+                    {% if app.user %}
+                        <li id="logout"><a href="{{  logout_path('main') }}">Logout <span class="glyphicon glyphicon-log-out"></span></a></li>
+                    {% endif %}
+
+                </ul>
+            </div>
+        </div>
+    </div>
+{% endblock %}
+{% block body %}{% endblock %}

@@ -1,0 +1,46 @@
+.container {
+    margin-top: 40px;
+}
+.login_form {
+    margin: 0 auto;
+    max-width: 400px;
+}
+
+form > div > div > input {
+    margin-bottom: 15px;
+    height:25px;
+}
+
+.form-control{
+    height: 45px;
+}
+
+.top-bar {
+    padding: 0.5rem;
+}
+
+.top-bar,
+.top-bar ul {
+    background-color: #e6e6e6;
+}
+
+.menu {
+    margin: 0;
+    list-style-type: none;
+    display: inline;
+}
+#logout{
+    float:right;
+    margin-right: 30px;
+}
+
+.menu > li {
+    display: table-cell;
+    vertical-align: middle;
+}
+
+.menu > li > a {
+    display: block;
+    padding: 0.7rem 1rem;
+    line-height: 1;
+}
