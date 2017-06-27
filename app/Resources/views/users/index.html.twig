@@ -36,10 +36,10 @@
         var timer;
         var path_url = '{{ path('search') }}';
         $('#search-field').keyup(function(){
+            clearTimeout(timer);
             if($('#search-field').val().length >= 3) {
                 show_all_data = false;
                 var search = $('#search-field').val();
-                clearTimeout(timer);
                 timer = setTimeout(function () {
                     $.ajax({
                         type: 'POST',
